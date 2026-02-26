@@ -1,0 +1,15 @@
+{
+  "name": "operation-scheduler",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "test": "npm run test -w server"
+  }
+}

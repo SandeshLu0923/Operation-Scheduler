@@ -1,0 +1,36 @@
+{
+  "name": "ot-scheduler-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test src/tests/*.test.js",
+    "seed:admin": "node src/scripts/seedAdmin.js",
+    "seed:demo": "node src/scripts/seedDemoData.js",
+    "seed:test-patients": "node src/scripts/seedTestPatients.js",
+    "seed:ot-blueprint": "node src/scripts/seedOtBlueprint.js",
+    "fix:nurse-asha-users": "node src/scripts/fixDuplicateNurseAshaUsers.js",
+    "fix:staff1-nurse-asha": "node src/scripts/linkStaff1ToNurseAsha.js",
+    "repair:arrangement-pending": "node src/scripts/backfillPendingArrangements.js",
+    "clear:operational-data": "node src/scripts/clearOperationalData.js",
+    "diagnose:data": "node src/scripts/diagnosticAndRepair.js",
+    "repair:invalid-refs": "node src/scripts/cleanupInvalidReferences.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "socket.io": "^4.8.1",
+    "winston": "^3.13.1"
+  }
+}
